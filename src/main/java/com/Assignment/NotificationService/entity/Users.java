@@ -18,7 +18,7 @@ public class Users {
     private String emailId;
 
     @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="recepient")
-    private List<Recepient> recepientsList;
+    private List<NotificationData> recepientsList;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id")

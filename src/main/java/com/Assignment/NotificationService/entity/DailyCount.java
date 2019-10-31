@@ -21,6 +21,7 @@ public class DailyCount {
 
     private Date todayDate;
 
+    private  long userID;
 
 
 }
