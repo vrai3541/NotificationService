@@ -17,16 +17,15 @@ public class Users {
 
     private String emailId;
 
-    @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="recepient")
-    private List<NotificationData> recepientsList;
+    private String phoneNumber;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
-    private Subscription subscription;
+    @OneToMany(fetch = FetchType.EAGER,
+            cascade =  CascadeType.ALL,
+            mappedBy = "users")
+    private List<Recipients> recipients;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
-    private DailyCount dailyCount;
-
+    @OneToOne(fetch = FetchType.EAGER,
+            cascade =  CascadeType.ALL)
+    private  Subscription subscription;
 
 }

@@ -2,11 +2,9 @@ package com.Assignment.NotificationService.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.DateTimeException;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -20,9 +18,14 @@ public class Subscription {
 
     private Integer userId;
 
-    private NotificationServicePlan plan;
+    private NotificationPlans subscriptionType;
 
-    private Date validUpto;
+    private String SubscriptionStatus;
+
+    private Long NotificationCount;
+
+    private LocalDateTime subscriptionDate;
+
 
 
 }
