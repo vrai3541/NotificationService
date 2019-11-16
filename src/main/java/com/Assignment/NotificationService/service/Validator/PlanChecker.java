@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 
 @Component
-public class Validator {
+public class PlanChecker {
 
     public ResponseEntity<?> validateUserPlan(Users user) {
 

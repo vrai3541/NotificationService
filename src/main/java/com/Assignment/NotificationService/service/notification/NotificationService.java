@@ -111,11 +111,11 @@ public class NotificationService {
 @Scheduled(fixedDelay=100)
     public void retryFailedMessages(){
 
-        List<FailedNotificationQueue> failedMessages=notificationQueueRepository.findAll();
+        List<NotificationTempData> failedMessages=notificationQueueRepository.findAll();
 
-        List<FailedNotificationQueue> filteredFailedMessages=   failedMessages.stream().filter(message-> message.getRetryCount()<3).collect(Collectors.toList());
+        List<NotificationTempData> filteredFailedMessages=   failedMessages.stream().filter(message-> message.getRetryCount()<3).collect(Collectors.toList());
 
-    for (FailedNotificationQueue message:filteredFailedMessages) {
+    for (NotificationTempData message:filteredFailedMessages) {
 
         Users user =userRepository.findById(message.getId()).get();
 

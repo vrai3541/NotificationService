@@ -13,7 +13,7 @@ import java.util.Date;
 
 @Entity
 @Data
-public class FailedNotificationQueue {
+public class NotificationTempData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

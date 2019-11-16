@@ -3,7 +3,7 @@ package com.Assignment.NotificationService.service.notificationSender;
 import com.Assignment.NotificationService.dao.NotificationArchivesRepository;
 import com.Assignment.NotificationService.dao.NotificationQueueRepository;
 import com.Assignment.NotificationService.dto.Notification;
-import com.Assignment.NotificationService.entity.FailedNotificationQueue;
+import com.Assignment.NotificationService.entity.NotificationTempData;
 import com.Assignment.NotificationService.entity.NotificationArchives;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,7 +40,7 @@ public class SmsSender implements NotificationSender {
     @Override
     public void queueFailedMessageForRetry(Notification notification) {
 
-        FailedNotificationQueue notificationQueueMessage = new FailedNotificationQueue();
+        NotificationTempData notificationQueueMessage = new NotificationTempData();
 
         notificationQueueMessage.setMessage(notification.getNotificationMessage());
         notificationQueueMessage.setMessageSentDate(LocalDateTime.now());
