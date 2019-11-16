@@ -16,7 +16,7 @@ public class Subscription {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Integer userId;
+    private Long userId;
 
     private NotificationPlans subscriptionType;
 

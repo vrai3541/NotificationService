@@ -38,6 +38,8 @@ public class NotificationService {
 
     public void createAndProcessNotification(Users user, String message) {
 
+        System.out.println("Creating and processing Notification for user "+user.getClientName());
+
         List<Recipients> recipients = user.getRecipients();
 
         NotificationPlans plans = user.getSubscription().getSubscriptionType();

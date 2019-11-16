@@ -21,7 +21,7 @@ private String message;
 
 private String notificationType;
 
-private  String userId;
+private long userId;
 
 private LocalDateTime sentDate;
 

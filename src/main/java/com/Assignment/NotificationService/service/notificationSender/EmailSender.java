@@ -64,7 +64,7 @@ public class EmailSender implements NotificationSender{
         notificationArchives.setRecipientEmail(notification.getRecepientEmail());
         notificationArchives.setRecipientPhone(notification.getRecepientNumber());
         notificationArchives.setRecipientPushToken(notification.getRecepientPushToken());
-        notificationArchives.setUserId(notification.getUserId().toString());
+        notificationArchives.setUserId(notification.getUserId());
         notificationArchives.setSentDate(LocalDateTime.now());
 
         notificationArchivesRepository.save(notificationArchives);
